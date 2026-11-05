@@ -17,3 +17,5 @@ node_modules
 
 .source
 .vscode
+# Vitest reports and artifacts
+.vitest/
