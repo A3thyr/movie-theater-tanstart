@@ -11,7 +11,10 @@
     "types:check": "tsc --noEmit",
     "lint": "oxlint",
     "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check"
+    "fmt:check": "oxfmt --check",
+    "check:i18n": "inlang check --project ./project.inlang",
+    "machine-translate": "inlang machine translate --project project.inlang",
+    "lint:i18n": "oxlint --config ./.oxlintrc.paraglide.json ."
   },
   "dependencies": {
     "@tanstack/react-router": "1.170.45",
@@ -40,6 +43,8 @@
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2",
     "vite": "^8.3.5",
-    "vitest": "^5.1.0"
+    "vitest": "^5.1.0",
+    "@inlang/paraglide-js": "^3.2.0",
+    "@inlang/cli": "^3.4.0"
   }
 }
