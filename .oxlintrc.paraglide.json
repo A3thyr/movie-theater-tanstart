@@ -6,16 +6,12 @@
       "specifier": "@inlang/paraglide-js/eslint"
     }
   ],
-  "ignorePatterns": [
-    "src/shared/lib/translations/**"
-  ],
+  "ignorePatterns": ["src/shared/lib/translations/**"],
   "rules": {
     "paraglide/no-dynamic-message-access": [
       "error",
       {
-        "messageModuleDirectories": [
-          "translations"
-        ]
+        "messageModuleDirectories": ["translations"]
       }
     ]
   }

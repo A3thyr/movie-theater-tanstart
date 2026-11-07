@@ -1,6 +1,5 @@
-import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
-import * as React from "react";
 import appCss from "@/styles/app.css?url";
+import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { RootProvider } from "fumadocs-ui/provider/tanstack";
 
 export const Route = createRootRoute({
@@ -14,7 +13,7 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "Fumadocs on TanStack Start",
+        title: "Movie Theater",
       },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
@@ -28,7 +27,7 @@ function RootComponent() {
       <head>
         <HeadContent />
       </head>
-      <body className="flex flex-col min-h-screen">
+      <body className="flex min-h-screen flex-col">
         <RootProvider>
           <Outlet />
         </RootProvider>
