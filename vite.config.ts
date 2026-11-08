@@ -24,7 +24,7 @@ export default defineConfig({
       },
     }),
 
-    react(),
+    react({ compiler: true }),
     // please see https://tanstack.com/start/latest/docs/framework/react/guide/hosting#nitro for guides on hosting
     nitro({
       preset: "vercel",
