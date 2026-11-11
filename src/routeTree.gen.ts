@@ -16,6 +16,7 @@ import { Route as AboutSplatRouteImport } from './routes/about/$'
 import { Route as ApiSearchRouteImport } from './routes/api/search'
 import { Route as DocsSplatRouteImport } from './routes/docs/$'
 import { Route as DocsChar123Char125DotmdRouteImport } from './routes/docs/{$}[.]md'
+import { Route as ExampleSplatRouteImport } from './routes/example/$'
 import { Route as OgDocsSplatRouteImport } from './routes/og/docs/$'
 
 const IndexRoute = IndexRouteImport.update({
@@ -53,6 +54,11 @@ const DocsChar123Char125DotmdRoute = DocsChar123Char125DotmdRouteImport.update({
   path: '/docs/{$}.md',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ExampleSplatRoute = ExampleSplatRouteImport.update({
+  id: '/example/$',
+  path: '/example/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OgDocsSplatRoute = OgDocsSplatRouteImport.update({
   id: '/og/docs/$',
   path: '/og/docs/$',
@@ -67,6 +73,7 @@ export interface FileRoutesByFullPath {
   '/api/search': typeof ApiSearchRoute
   '/docs/$': typeof DocsSplatRoute
   '/docs/{$}.md': typeof DocsChar123Char125DotmdRoute
+  '/example/$': typeof ExampleSplatRoute
   '/og/docs/$': typeof OgDocsSplatRoute
 }
 export interface FileRoutesByTo {
@@ -77,6 +84,7 @@ export interface FileRoutesByTo {
   '/api/search': typeof ApiSearchRoute
   '/docs/$': typeof DocsSplatRoute
   '/docs/{$}.md': typeof DocsChar123Char125DotmdRoute
+  '/example/$': typeof ExampleSplatRoute
   '/og/docs/$': typeof OgDocsSplatRoute
 }
 export interface FileRoutesById {
@@ -88,6 +96,7 @@ export interface FileRoutesById {
   '/api/search': typeof ApiSearchRoute
   '/docs/$': typeof DocsSplatRoute
   '/docs/{$}.md': typeof DocsChar123Char125DotmdRoute
+  '/example/$': typeof ExampleSplatRoute
   '/og/docs/$': typeof OgDocsSplatRoute
 }
 export interface FileRouteTypes {
@@ -100,6 +109,7 @@ export interface FileRouteTypes {
     | '/api/search'
     | '/docs/$'
     | '/docs/{$}.md'
+    | '/example/$'
     | '/og/docs/$'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -110,6 +120,7 @@ export interface FileRouteTypes {
     | '/api/search'
     | '/docs/$'
     | '/docs/{$}.md'
+    | '/example/$'
     | '/og/docs/$'
   id:
     | '__root__'
@@ -120,6 +131,7 @@ export interface FileRouteTypes {
     | '/api/search'
     | '/docs/$'
     | '/docs/{$}.md'
+    | '/example/$'
     | '/og/docs/$'
   fileRoutesById: FileRoutesById
 }
@@ -131,6 +143,7 @@ export interface RootRouteChildren {
   ApiSearchRoute: typeof ApiSearchRoute
   DocsSplatRoute: typeof DocsSplatRoute
   DocsChar123Char125DotmdRoute: typeof DocsChar123Char125DotmdRoute
+  ExampleSplatRoute: typeof ExampleSplatRoute
   OgDocsSplatRoute: typeof OgDocsSplatRoute
 }
 
@@ -185,6 +198,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsChar123Char125DotmdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/example/$': {
+      id: '/example/$'
+      path: '/example/$'
+      fullPath: '/example/$'
+      preLoaderRoute: typeof ExampleSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/og/docs/$': {
       id: '/og/docs/$'
       path: '/og/docs/$'
@@ -203,18 +223,9 @@ const rootRouteChildren: RootRouteChildren = {
   ApiSearchRoute: ApiSearchRoute,
   DocsSplatRoute: DocsSplatRoute,
   DocsChar123Char125DotmdRoute: DocsChar123Char125DotmdRoute,
+  ExampleSplatRoute: ExampleSplatRoute,
   OgDocsSplatRoute: OgDocsSplatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

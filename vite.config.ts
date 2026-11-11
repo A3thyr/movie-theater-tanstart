@@ -5,12 +5,17 @@ import tailwindcss from "@tailwindcss/vite";
 import { fumadocsMdx } from "fumadocs-mdx/vite";
 import { nitro } from "nitro/vite";
 import { paraglideVitePlugin } from "@inlang/paraglide-js";
+import { tanstackRouter } from "@tanstack/router-plugin/vite";
 
 export default defineConfig({
   server: {
     port: 3000,
   },
   plugins: [
+    tanstackRouter({
+      target: "react",
+      autoCodeSplitting: true,
+    }),
     paraglideVitePlugin({
       project: "./project.inlang",
       outdir: "./src/shared/lib/translations",
