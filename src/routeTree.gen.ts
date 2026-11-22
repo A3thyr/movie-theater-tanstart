@@ -8,210 +8,210 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as LlmsFullDottxtRouteImport } from './routes/llms-full[.]txt'
-import { Route as LlmsDottxtRouteImport } from './routes/llms[.]txt'
-import { Route as AboutSplatRouteImport } from './routes/about/$'
-import { Route as ApiSearchRouteImport } from './routes/api/search'
-import { Route as DocsSplatRouteImport } from './routes/docs/$'
-import { Route as DocsChar123Char125DotmdRouteImport } from './routes/docs/{$}[.]md'
-import { Route as ExampleSplatRouteImport } from './routes/example/$'
-import { Route as OgDocsSplatRouteImport } from './routes/og/docs/$'
+import { Route as rootRouteImport } from "./routes/__root";
+import { Route as IndexRouteImport } from "./routes/index";
+import { Route as LlmsFullDottxtRouteImport } from "./routes/llms-full[.]txt";
+import { Route as LlmsDottxtRouteImport } from "./routes/llms[.]txt";
+import { Route as AboutSplatRouteImport } from "./routes/about/$";
+import { Route as ApiSearchRouteImport } from "./routes/api/search";
+import { Route as DocsSplatRouteImport } from "./routes/docs/$";
+import { Route as DocsChar123Char125DotmdRouteImport } from "./routes/docs/{$}[.]md";
+import { Route as ExampleSplatRouteImport } from "./routes/example/$";
+import { Route as OgDocsSplatRouteImport } from "./routes/og/docs/$";
 
 const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+  id: "/",
+  path: "/",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const LlmsFullDottxtRoute = LlmsFullDottxtRouteImport.update({
-  id: '/llms-full.txt',
-  path: '/llms-full.txt',
+  id: "/llms-full.txt",
+  path: "/llms-full.txt",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const LlmsDottxtRoute = LlmsDottxtRouteImport.update({
-  id: '/llms.txt',
-  path: '/llms.txt',
+  id: "/llms.txt",
+  path: "/llms.txt",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const AboutSplatRoute = AboutSplatRouteImport.update({
-  id: '/about/$',
-  path: '/about/$',
+  id: "/about/$",
+  path: "/about/$",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const ApiSearchRoute = ApiSearchRouteImport.update({
-  id: '/api/search',
-  path: '/api/search',
+  id: "/api/search",
+  path: "/api/search",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const DocsSplatRoute = DocsSplatRouteImport.update({
-  id: '/docs/$',
-  path: '/docs/$',
+  id: "/docs/$",
+  path: "/docs/$",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const DocsChar123Char125DotmdRoute = DocsChar123Char125DotmdRouteImport.update({
-  id: '/docs/{$}.md',
-  path: '/docs/{$}.md',
+  id: "/docs/{$}.md",
+  path: "/docs/{$}.md",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const ExampleSplatRoute = ExampleSplatRouteImport.update({
-  id: '/example/$',
-  path: '/example/$',
+  id: "/example/$",
+  path: "/example/$",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const OgDocsSplatRoute = OgDocsSplatRouteImport.update({
-  id: '/og/docs/$',
-  path: '/og/docs/$',
+  id: "/og/docs/$",
+  path: "/og/docs/$",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/llms-full.txt': typeof LlmsFullDottxtRoute
-  '/llms.txt': typeof LlmsDottxtRoute
-  '/about/$': typeof AboutSplatRoute
-  '/api/search': typeof ApiSearchRoute
-  '/docs/$': typeof DocsSplatRoute
-  '/docs/{$}.md': typeof DocsChar123Char125DotmdRoute
-  '/example/$': typeof ExampleSplatRoute
-  '/og/docs/$': typeof OgDocsSplatRoute
+  "/": typeof IndexRoute;
+  "/llms-full.txt": typeof LlmsFullDottxtRoute;
+  "/llms.txt": typeof LlmsDottxtRoute;
+  "/about/$": typeof AboutSplatRoute;
+  "/api/search": typeof ApiSearchRoute;
+  "/docs/$": typeof DocsSplatRoute;
+  "/docs/{$}.md": typeof DocsChar123Char125DotmdRoute;
+  "/example/$": typeof ExampleSplatRoute;
+  "/og/docs/$": typeof OgDocsSplatRoute;
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/llms-full.txt': typeof LlmsFullDottxtRoute
-  '/llms.txt': typeof LlmsDottxtRoute
-  '/about/$': typeof AboutSplatRoute
-  '/api/search': typeof ApiSearchRoute
-  '/docs/$': typeof DocsSplatRoute
-  '/docs/{$}.md': typeof DocsChar123Char125DotmdRoute
-  '/example/$': typeof ExampleSplatRoute
-  '/og/docs/$': typeof OgDocsSplatRoute
+  "/": typeof IndexRoute;
+  "/llms-full.txt": typeof LlmsFullDottxtRoute;
+  "/llms.txt": typeof LlmsDottxtRoute;
+  "/about/$": typeof AboutSplatRoute;
+  "/api/search": typeof ApiSearchRoute;
+  "/docs/$": typeof DocsSplatRoute;
+  "/docs/{$}.md": typeof DocsChar123Char125DotmdRoute;
+  "/example/$": typeof ExampleSplatRoute;
+  "/og/docs/$": typeof OgDocsSplatRoute;
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
-  '/llms-full.txt': typeof LlmsFullDottxtRoute
-  '/llms.txt': typeof LlmsDottxtRoute
-  '/about/$': typeof AboutSplatRoute
-  '/api/search': typeof ApiSearchRoute
-  '/docs/$': typeof DocsSplatRoute
-  '/docs/{$}.md': typeof DocsChar123Char125DotmdRoute
-  '/example/$': typeof ExampleSplatRoute
-  '/og/docs/$': typeof OgDocsSplatRoute
+  __root__: typeof rootRouteImport;
+  "/": typeof IndexRoute;
+  "/llms-full.txt": typeof LlmsFullDottxtRoute;
+  "/llms.txt": typeof LlmsDottxtRoute;
+  "/about/$": typeof AboutSplatRoute;
+  "/api/search": typeof ApiSearchRoute;
+  "/docs/$": typeof DocsSplatRoute;
+  "/docs/{$}.md": typeof DocsChar123Char125DotmdRoute;
+  "/example/$": typeof ExampleSplatRoute;
+  "/og/docs/$": typeof OgDocsSplatRoute;
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
+  fileRoutesByFullPath: FileRoutesByFullPath;
   fullPaths:
-    | '/'
-    | '/llms-full.txt'
-    | '/llms.txt'
-    | '/about/$'
-    | '/api/search'
-    | '/docs/$'
-    | '/docs/{$}.md'
-    | '/example/$'
-    | '/og/docs/$'
-  fileRoutesByTo: FileRoutesByTo
+    | "/"
+    | "/llms-full.txt"
+    | "/llms.txt"
+    | "/about/$"
+    | "/api/search"
+    | "/docs/$"
+    | "/docs/{$}.md"
+    | "/example/$"
+    | "/og/docs/$";
+  fileRoutesByTo: FileRoutesByTo;
   to:
-    | '/'
-    | '/llms-full.txt'
-    | '/llms.txt'
-    | '/about/$'
-    | '/api/search'
-    | '/docs/$'
-    | '/docs/{$}.md'
-    | '/example/$'
-    | '/og/docs/$'
+    | "/"
+    | "/llms-full.txt"
+    | "/llms.txt"
+    | "/about/$"
+    | "/api/search"
+    | "/docs/$"
+    | "/docs/{$}.md"
+    | "/example/$"
+    | "/og/docs/$";
   id:
-    | '__root__'
-    | '/'
-    | '/llms-full.txt'
-    | '/llms.txt'
-    | '/about/$'
-    | '/api/search'
-    | '/docs/$'
-    | '/docs/{$}.md'
-    | '/example/$'
-    | '/og/docs/$'
-  fileRoutesById: FileRoutesById
+    | "__root__"
+    | "/"
+    | "/llms-full.txt"
+    | "/llms.txt"
+    | "/about/$"
+    | "/api/search"
+    | "/docs/$"
+    | "/docs/{$}.md"
+    | "/example/$"
+    | "/og/docs/$";
+  fileRoutesById: FileRoutesById;
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  LlmsFullDottxtRoute: typeof LlmsFullDottxtRoute
-  LlmsDottxtRoute: typeof LlmsDottxtRoute
-  AboutSplatRoute: typeof AboutSplatRoute
-  ApiSearchRoute: typeof ApiSearchRoute
-  DocsSplatRoute: typeof DocsSplatRoute
-  DocsChar123Char125DotmdRoute: typeof DocsChar123Char125DotmdRoute
-  ExampleSplatRoute: typeof ExampleSplatRoute
-  OgDocsSplatRoute: typeof OgDocsSplatRoute
+  IndexRoute: typeof IndexRoute;
+  LlmsFullDottxtRoute: typeof LlmsFullDottxtRoute;
+  LlmsDottxtRoute: typeof LlmsDottxtRoute;
+  AboutSplatRoute: typeof AboutSplatRoute;
+  ApiSearchRoute: typeof ApiSearchRoute;
+  DocsSplatRoute: typeof DocsSplatRoute;
+  DocsChar123Char125DotmdRoute: typeof DocsChar123Char125DotmdRoute;
+  ExampleSplatRoute: typeof ExampleSplatRoute;
+  OgDocsSplatRoute: typeof OgDocsSplatRoute;
 }
 
-declare module '@tanstack/react-router' {
+declare module "@tanstack/react-router" {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/llms-full.txt': {
-      id: '/llms-full.txt'
-      path: '/llms-full.txt'
-      fullPath: '/llms-full.txt'
-      preLoaderRoute: typeof LlmsFullDottxtRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/llms.txt': {
-      id: '/llms.txt'
-      path: '/llms.txt'
-      fullPath: '/llms.txt'
-      preLoaderRoute: typeof LlmsDottxtRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about/$': {
-      id: '/about/$'
-      path: '/about/$'
-      fullPath: '/about/$'
-      preLoaderRoute: typeof AboutSplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/search': {
-      id: '/api/search'
-      path: '/api/search'
-      fullPath: '/api/search'
-      preLoaderRoute: typeof ApiSearchRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/docs/$': {
-      id: '/docs/$'
-      path: '/docs/$'
-      fullPath: '/docs/$'
-      preLoaderRoute: typeof DocsSplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/docs/{$}.md': {
-      id: '/docs/{$}.md'
-      path: '/docs/{$}.md'
-      fullPath: '/docs/{$}.md'
-      preLoaderRoute: typeof DocsChar123Char125DotmdRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/example/$': {
-      id: '/example/$'
-      path: '/example/$'
-      fullPath: '/example/$'
-      preLoaderRoute: typeof ExampleSplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/og/docs/$': {
-      id: '/og/docs/$'
-      path: '/og/docs/$'
-      fullPath: '/og/docs/$'
-      preLoaderRoute: typeof OgDocsSplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
+    "/": {
+      id: "/";
+      path: "/";
+      fullPath: "/";
+      preLoaderRoute: typeof IndexRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/llms-full.txt": {
+      id: "/llms-full.txt";
+      path: "/llms-full.txt";
+      fullPath: "/llms-full.txt";
+      preLoaderRoute: typeof LlmsFullDottxtRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/llms.txt": {
+      id: "/llms.txt";
+      path: "/llms.txt";
+      fullPath: "/llms.txt";
+      preLoaderRoute: typeof LlmsDottxtRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/about/$": {
+      id: "/about/$";
+      path: "/about/$";
+      fullPath: "/about/$";
+      preLoaderRoute: typeof AboutSplatRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/api/search": {
+      id: "/api/search";
+      path: "/api/search";
+      fullPath: "/api/search";
+      preLoaderRoute: typeof ApiSearchRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/docs/$": {
+      id: "/docs/$";
+      path: "/docs/$";
+      fullPath: "/docs/$";
+      preLoaderRoute: typeof DocsSplatRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/docs/{$}.md": {
+      id: "/docs/{$}.md";
+      path: "/docs/{$}.md";
+      fullPath: "/docs/{$}.md";
+      preLoaderRoute: typeof DocsChar123Char125DotmdRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/example/$": {
+      id: "/example/$";
+      path: "/example/$";
+      fullPath: "/example/$";
+      preLoaderRoute: typeof ExampleSplatRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/og/docs/$": {
+      id: "/og/docs/$";
+      path: "/og/docs/$";
+      fullPath: "/og/docs/$";
+      preLoaderRoute: typeof OgDocsSplatRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
   }
 }
 
@@ -225,7 +225,7 @@ const rootRouteChildren: RootRouteChildren = {
   DocsChar123Char125DotmdRoute: DocsChar123Char125DotmdRoute,
   ExampleSplatRoute: ExampleSplatRoute,
   OgDocsSplatRoute: OgDocsSplatRoute,
-}
+};
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>()
+  ._addFileTypes<FileRouteTypes>();
